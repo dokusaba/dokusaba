@@ -1,0 +1,120 @@
+@charset "UTF-8";
+span {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+body {
+  background-color: #fafafa;
+  min-height: 100vh; /*画面の高さの最小値を指定*/
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1; /*main要素が残りのスペースを全て使う*/
+}
+
+header {
+  color: #764bc4;
+  padding: 1rem;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #764bc4;
+}
+@media screen and (max-width: 1400px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+header h1 {
+  margin: 0;
+  font-size: calc(5rem + 2vw);
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+header nav {
+  display: inline-block;
+  margin-left: 1rem;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+}
+header nav ul li {
+  margin-left: 1rem;
+}
+header nav ul li a {
+  color: #764bc4;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+main article {
+  margin: 2rem 0;
+}
+main article h2 {
+  font-size: 2rem;
+}
+main article p {
+  line-height: 1.8;
+}
+main article .rounded__wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #764bc4;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+footer nav {
+  margin: 1rem 0;
+}
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer nav ul li {
+  margin-left: 1rem;
+}
+footer nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
